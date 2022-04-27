@@ -1,0 +1,32 @@
+ [04:49:46] - asyncio - DEBUG - Using proactor: _IocpProactor
+ [04:49:46] - quamash._QEventLoop - DEBUG - Registering callback <bound method BaseProactorEventLoop._loop_self_reading of <QIOCPEventLoop running=False closed=False debug=False>> to be invoked with arguments () after 0 second(s)
+ [04:49:46] - quamash._SimpleTimer - DEBUG - Registering timer id 1
+ [04:49:47] - quamash._windows._EventPoller - DEBUG - Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+ [04:49:47] - quamash._windows._EventWorker - DEBUG - Thread started
+ [04:49:47] - quamash._QEventLoop - DEBUG - Starting Qt event loop
+ [04:49:47] - quamash._SimpleTimer - DEBUG - Timer event on id 1
+ [04:49:47] - quamash._SimpleTimer - DEBUG - Calling handle <Handle BaseProactorEventLoop._loop_self_reading()>
+ [04:51:25] - quamash._QEventLoop - DEBUG - Registering callback <TaskStepMethWrapper object at 0x00000177C9D2FAC8> to be invoked with arguments () after 0 second(s)
+ [04:51:25] - quamash._SimpleTimer - DEBUG - Registering timer id 4
+ [04:51:25] - quamash._SimpleTimer - DEBUG - Timer event on id 4
+ [04:51:25] - quamash._SimpleTimer - DEBUG - Calling handle <Handle <TaskStepMethWrapper object at 0x00000177C9D2FAC8>()>
+ [04:51:25] - session - DEBUG - Started 'location'!
+ [04:51:25] - quamash._QEventLoop - DEBUG - Registering callback <bound method TimeoutHandle.__call__ of <aiohttp.helpers.TimeoutHandle object at 0x00000177C9D3B080>> to be invoked with arguments () after 300.51600000000326 second(s)
+ [04:51:25] - quamash._SimpleTimer - DEBUG - Registering timer id 7
+ [04:51:25] - quamash._QEventLoop - DEBUG - Registering callback <function _wait.<locals>._on_completion at 0x00000177C743EBF8> to be invoked with arguments (<Future finished result=[(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('127.0.0.1', 8888))]>,) after 0 second(s)
+ [04:51:25] - quamash._SimpleTimer - DEBUG - Registering timer id 3
+ [04:51:25] - quamash._SimpleTimer - DEBUG - Timer event on id 3
+ [04:51:25] - quamash._SimpleTimer - DEBUG - Calling handle <Handle _wait.<locals>._on_completion(<Future finis...0.1', 8888))]>) at C:\Users\calib\Anaconda3\lib\asyncio\tasks.py:380>
+ [04:51:25] - quamash._QEventLoop - DEBUG - Registering callback <TaskWakeupMethWrapper object at 0x00000177C7887648> to be invoked with arguments (<Future finished result=None>,) after 0 second(s)
+ [04:51:25] - quamash._SimpleTimer - DEBUG - Registering timer id 4
+ [04:51:25] - quamash._SimpleTimer - DEBUG - Timer event on id 4
+ [04:51:25] - quamash._SimpleTimer - DEBUG - Calling handle <Handle <TaskWakeupMethWrapper object at 0x00000177C7887648>(<Future finished result=None>)>
+ [04:51:26] - quamash._windows._EventWorker - DEBUG - Got events from poll: [(<_OverlappedFuture pending overlapped=<completed, 0x177c7be0e50> cb=[<TaskWakeupMethWrapper object at 0x00000177C78875E8>()]>, <function IocpProactor.connect.<locals>.finish_connect at 0x00000177C743EBF8>, 0, 0, <_overlapped.Overlapped object at 0x00000177C7BE0E40>)]
+ [04:51:26] - quamash._QEventLoop - DEBUG - Invoking event callback <function IocpProactor.connect.<locals>.finish_connect at 0x00000177C743EBF8>
+ [04:51:26] - quamash._QEventLoop - WARNING - Event callback failed
+Traceback (most recent call last):
+  File "C:\Users\calib\Anaconda3\lib\site-packages\quamash\_windows.py", line 42, in _process_events
+    value = callback(transferred, key, ov)
+  File "C:\Users\calib\Anaconda3\lib\asyncio\windows_events.py", line 514, in finish_connect
+    ov.getresult()
+ConnectionRefusedError: [WinError 1225] The remote computer refused the network connection
